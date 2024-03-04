@@ -20,6 +20,8 @@ public class LoginPage {
 	private By logoutCheck=By.xpath("(//div[@class='header-user p-0 '])[last()]");
 	private By logo=By.xpath("//img[@alt='Guess US']");
 	public By logout=By.xpath("//a[text()=' Sign out']");
+	private By logoutLink=By.id("Rekha");
+	
 	
 	public LoginPage(WebDriver driver) {
 		this.driver=driver;
@@ -30,6 +32,7 @@ public class LoginPage {
 
 	public String getLoginPageTitle() {
 		return driver.getTitle();
+	
 	}
 	public String getLoginPageUrl() {
 		return driver.getCurrentUrl();
