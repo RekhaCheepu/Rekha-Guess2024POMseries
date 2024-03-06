@@ -8,7 +8,9 @@ public class PocPage {
 		 
 	 }
 	 public void addToPoc() {
+		 System.out.println("adding to cart");
 		 System.out.println("poc is done");
+		
 		 
 	 }
 
