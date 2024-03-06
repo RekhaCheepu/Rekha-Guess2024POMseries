@@ -8,7 +8,8 @@ public class CartPage {
 		 
 	 }
 	 public void addToCart() {
-		 
+		 System.out.println("add to cart");
+		System.out.println("cart page is done"); 
 	 }
 
 }
