@@ -7,6 +7,9 @@ public class CheckoutPage {
 		System.out.println("checkout --Rekha");
 		int i=100;
 		String name= "macbook";
+		}
+	public void race(){
+		System.out.println("racing---");
 	}
 
 }
