@@ -10,11 +10,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.io.FileHandler;
 
 public class DriverFactory {
+	
 	
 	public WebDriver driver;
 	public Properties prop;
@@ -22,11 +25,29 @@ public class DriverFactory {
 	public static String highlight;
 	static ThreadLocal<WebDriver>tlDriver=new ThreadLocal<WebDriver>();
 	
+	
+	
+//	public WebDriver initDriver(Properties prop) {
+//		String browserName=prop.getProperty("browser").trim();
+//		System.out.println("Browser Name is:"+browserName);
+//		highlight=prop.getProperty("highlight");
+//		optionsManager=new OptionsManager(prop);
 	public WebDriver initDriver(Properties prop) {
-		String browserName=prop.getProperty("browser").trim();
-		System.out.println("Browser Name is:"+browserName);
-		highlight=prop.getProperty("highlight");
-		optionsManager=new OptionsManager(prop);
+	    if (prop == null) {
+	        // Log or throw an exception indicating that the properties are null
+	        System.out.println("Properties are null. Cannot initialize driver.");
+	        return null;
+	    }
+
+	    String browserName = prop.getProperty("browser").trim();
+	    System.out.println("Browser Name is: " + browserName);
+	    highlight = prop.getProperty("highlight");
+	    optionsManager = new OptionsManager(prop);
+
+	    // Rest of the method remains unchanged
+	    // ...
+	
+
 		
 		if(browserName.equalsIgnoreCase("chrome")) {
 			tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
@@ -46,19 +67,61 @@ public class DriverFactory {
 		return getDriver();
 	}
 
+
 	
 	public Properties initProp() {
-		Properties prop=new Properties();
+		prop = new Properties();
+		FileInputStream ip = null;
+
+		// mvn clean install -Denv="qa"
+		// mvn clean install
+
+		String envName = System.getProperty("env");
+		System.out.println("-----> Running test cases on environment----> " + envName);
+
+		if (envName == null) {
+			System.out.println("No env is given...hence running it on default QA env....");
+			try {
+				ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+		} else {
+
+			try {
+				switch (envName.toLowerCase()) {
+				case "qa":
+					ip = new FileInputStream("./src/test/resources/config/qa.config.properties");
+					break;
+				case "dev":
+					ip = new FileInputStream("./src/test/resources/config/dev.config.properties");
+					break;
+				case "stage":
+					ip = new FileInputStream("./src/test/resources/config/stage.config.properties");
+					break;
+				case "uat":
+					ip = new FileInputStream("./src/test/resources/config/uat.config.properties");
+					break;
+				case "prod":
+					ip = new FileInputStream("./src/test/resources/config/config.properties");
+					break;
+
+				default:
+					System.out.println("Please pass the right env name...." + envName);
+					break;
+				}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+
+		}
+
 		try {
-			FileInputStream ip=new FileInputStream("src/test/resources/config/config.properties");
 			prop.load(ip);
-		} catch (FileNotFoundException e) {
-			
-			e.printStackTrace();
 		} catch (IOException e) {
-			
 			e.printStackTrace();
 		}
+
 		return prop;
 	}
 	public static String getScreenshot() {
@@ -82,12 +145,14 @@ public class DriverFactory {
 	    
 	    return path;
 	}
-
+	
+	
 	
 	public synchronized static WebDriver getDriver() {
 		
 		return tlDriver.get();
 	}
+	
 
 }
 	

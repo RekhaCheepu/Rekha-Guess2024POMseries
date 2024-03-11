@@ -10,7 +10,7 @@ public class AppConstants {
 		public static final String ACCOUNT_PAGE_TITLE="My Account | GUESS";
 		public static final String ACCOUNT_PAGE_FRACTIONURL="account";
 		//public static final String SEARCH_PAGE_FRACTION_TILE="Search: ";
-		public static final List<String> EXPECTED_ACC_HEADERS_LIST=Arrays.asList("GUESS List","My account","Orders & Returns","Favorites","Communications");
+		public static final List<String> EXPECTED_ACC_HEADERS_LIST=Arrays.asList("GUESS List","My account","Orders & Returns","Gift Cards","Favorites","Communications");
 		public static final String IMAGESCOUNT_SHEET_NAME = "ImagesCount";
 	}
 

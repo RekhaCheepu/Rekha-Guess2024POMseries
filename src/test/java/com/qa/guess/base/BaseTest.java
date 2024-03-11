@@ -3,8 +3,6 @@ package com.qa.guess.base;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
@@ -28,6 +26,7 @@ public class BaseTest {
 	public void setUp() {
 		df=new DriverFactory();
 	prop=df.initProp();
+	 System.out.println("Properties: " + prop);
 	driver=df.initDriver(prop);
 		loginPage=new LoginPage(driver);
 		softAssert=new SoftAssert();
