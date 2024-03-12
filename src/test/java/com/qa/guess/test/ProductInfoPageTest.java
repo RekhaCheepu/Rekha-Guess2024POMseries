@@ -22,7 +22,7 @@ public Object[][] getProductTestData() {
 		{"Floral Dress","Aida Floral Velvet Dress"},
 		{"Belts","Logo Embellished Belt"},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz"},
-		{"Jewelry","Gold-Tone Cuban-Link Bracelet"},
+		{"Jewelry","Ruby Stud Drop Earrings"},
 		{"Small Bags","Ederlo Small Necessity Bag"},
 	};
 	
@@ -43,7 +43,7 @@ public Object[][] getProductImagesTestData() {
 		{"Floral Dress","Aida Floral Velvet Dress",7},
 		{"Belts","Logo Embellished Belt",2},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz",2},
-		{"Jewelry","Gold-Tone Cuban-Link Bracelet",1},
+		{"Jewelry","Ruby Stud Drop Earrings",2},
 		{"Small Bags","Ederlo Small Necessity Bag",4},
 	};
 	
@@ -75,7 +75,7 @@ public Object[][] getProductPriceAndColorTestData() {
 		{"Floral Dress","Aida Floral Velvet Dress"},
 		{"Belts","Logo Embellished Belt"},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz"},
-		{"Jewelry","Gold-Tone Cuban-Link Bracelet"},
+		{"Jewelry","Ruby Stud Drop Earrings"},
 		{"Small Bags","Ederlo Small Necessity Bag"},
 	};
 	
