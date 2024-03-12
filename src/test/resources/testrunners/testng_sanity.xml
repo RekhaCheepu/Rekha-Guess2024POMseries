@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Guess Test Suite" verbose="4" thread-count="3" parallel="tests">
+	
+	 <listeners>
+		 <listener
+		 class-name="com.qa.guess.listeners.ExtentReportListener" />
+		 <listener
+		 class-name="com.qa.guess.listeners.TestAllureListener" />
+	</listeners>
+	
+	<test name="Login page Test"> 
+		
+	<classes>
+			<class name="com.qa.guess.test.LoginPageTest" />
+		</classes>
+	</test>
+	
+	
+	 <test name="Accounts Page Test"> 
+		
+	<classes>
+			<class name="com.qa.guess.test.AccountsPageTest" />
+		</classes>
+	</test> 
+	 
+	
+	
+	</suite>
