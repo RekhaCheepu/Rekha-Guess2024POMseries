@@ -20,7 +20,7 @@ public Object[][] getProductTestData() {
 	return new Object[][] {
 		
 		{"Floral Dress","Aida Floral Velvet Dress"},
-		{"Belts","Vera G Belt"},
+		{"Belts","Logo Embellished Belt"},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz"},
 		{"Jewelry","Gold-Tone Cuban-Link Bracelet"},
 		{"Small Bags","Ederlo Small Necessity Bag"},
@@ -40,8 +40,8 @@ Assert.assertEquals(actHeader, searchProductName);
 public Object[][] getProductImagesTestData() {
 	return new Object[][] {
 		
-		{"Dress","Jeanie Beaded Dress",5},
-		{"Belts","Vera G Belt",4},
+		{"Floral Dress","Aida Floral Velvet Dress",7},
+		{"Belts","Logo Embellished Belt",2},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz",2},
 		{"Jewelry","Gold-Tone Cuban-Link Bracelet",1},
 		{"Small Bags","Ederlo Small Necessity Bag",4},
@@ -72,8 +72,8 @@ public void productImagesTest(String searchKey,String mainProduct,int imagesCoun
 public Object[][] getProductPriceAndColorTestData() {
 	return new Object[][] {
 		
-		{"Dress","Jeanie Beaded Dress"},
-		{"Belts","Vera G Belt"},
+		{"Floral Dress","Aida Floral Velvet Dress"},
+		{"Belts","Logo Embellished Belt"},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz"},
 		{"Jewelry","Gold-Tone Cuban-Link Bracelet"},
 		{"Small Bags","Ederlo Small Necessity Bag"},
