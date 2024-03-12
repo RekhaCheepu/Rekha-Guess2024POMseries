@@ -19,7 +19,7 @@ public class ProductInfoPageTest extends BaseTest {
 public Object[][] getProductTestData() {
 	return new Object[][] {
 		
-		{"Wallet","Dillon Bifold Wallet"},
+		{"Floral Dress","Aida Floral Velvet Dress"},
 		{"Belts","Vera G Belt"},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz"},
 		{"Jewelry","Gold-Tone Cuban-Link Bracelet"},
@@ -40,7 +40,7 @@ Assert.assertEquals(actHeader, searchProductName);
 public Object[][] getProductImagesTestData() {
 	return new Object[][] {
 		
-		{"Wallet","Dillon Bifold Wallet",3},
+		{"Dress","Jeanie Beaded Dress",5},
 		{"Belts","Vera G Belt",4},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz",2},
 		{"Jewelry","Gold-Tone Cuban-Link Bracelet",1},
@@ -72,7 +72,7 @@ public void productImagesTest(String searchKey,String mainProduct,int imagesCoun
 public Object[][] getProductPriceAndColorTestData() {
 	return new Object[][] {
 		
-		{"Wallet","Dillon Bifold Wallet"},
+		{"Dress","Jeanie Beaded Dress"},
 		{"Belts","Vera G Belt"},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz"},
 		{"Jewelry","Gold-Tone Cuban-Link Bracelet"},
