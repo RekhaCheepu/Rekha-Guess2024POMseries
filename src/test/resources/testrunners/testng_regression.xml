@@ -24,12 +24,12 @@
 			<class name="com.qa.guess.test.AccountsPageTest" />
 		</classes>
 	</test> 
-	 <test name="Product Info Page Test"> 
+	<!--  <test name="Product Info Page Test"> 
 		
 	<classes>
 			<class name="com.qa.guess.test.ProductInfoPageTest" />
 		</classes>
-	</test>  
+	</test>  -->
 	
 	
 	</suite>

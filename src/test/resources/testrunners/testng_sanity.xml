@@ -18,12 +18,12 @@
 	</test>
 	
 	
-	 <test name="Accounts Page Test"> 
+	<!--  <test name="Accounts Page Test"> 
 		
 	<classes>
 			<class name="com.qa.guess.test.AccountsPageTest" />
 		</classes>
-	</test> 
+	</test> -->
 	 
 	
 	
