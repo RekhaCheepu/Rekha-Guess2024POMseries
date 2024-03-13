@@ -42,19 +42,19 @@ public class AccountsPageTest extends BaseTest {
 		List<String>actHeaderList=accPage.getAccountPageSectionHeaders();
 		Assert.assertEquals(actHeaderList, AppConstants.EXPECTED_ACC_HEADERS_LIST);
 	}
-//	@DataProvider
-//	public Object[][] getProductName() {
-//		return new Object[][] {
-//			{"Belts"},
-//			{"Totes"},
-//			{"Shoe"},
-//			
-//			
-//		};
-//	}
+	@DataProvider
+	public Object[][] getProductName() {
+		return new Object[][] {
+			{"Belts"},
+			{"Totes"},
+			{"Shoe"},
+			
+			
+		};
+	}
 	@Test//(dataProvider="getProductName")
-	public void productSearchTest() {
-		String productName="Bags";
+	public void productSearchTest(String productName) {
+		
 	resultsPage=accPage.performSearch(productName);
 	String actTitle=resultsPage.getSearchPageTitle(productName);
 
