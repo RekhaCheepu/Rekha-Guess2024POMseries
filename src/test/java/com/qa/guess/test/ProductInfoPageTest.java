@@ -6,10 +6,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.qa.guess.base.BaseTest;
-import com.qa.guess.utils.AppConstants;
-import com.qa.guess.utils.ExcelUtil;
 
-public class ProductInfoPageTest extends BaseTest {
+public class ProductInfoPageTest extends BaseTest{
 @BeforeClass
 	
 	public void accSetUp() {
@@ -19,11 +17,11 @@ public class ProductInfoPageTest extends BaseTest {
 public Object[][] getProductTestData() {
 	return new Object[][] {
 		
-		{"Floral Dress","Aida Floral Velvet Dress"},
-		{"Belts","Logo Embellished Belt"},
+		{"Overall Dress ","Leopard Denim Overalls (2-7))"},
+		{"Reversible Belt Gold","Reversible Jacquard Quattro G Belt"},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz"},
-		{"Jewelry","Ruby Stud Drop Earrings"},
-		{"Small Bags","Ederlo Small Necessity Bag"},
+		{"Floral Jewelery","14K Gold-Plated Floral Statement Earrings"},
+		{"Small Bag","Ederlo Small Necessity Bag"},
 	};
 	
 }
@@ -40,11 +38,11 @@ Assert.assertEquals(actHeader, searchProductName);
 public Object[][] getProductImagesTestData() {
 	return new Object[][] {
 		
-		{"Floral Dress","Aida Floral Velvet Dress",7},
-		{"Belts","Logo Embellished Belt",2},
+		{"Overall Dress ","Leopard Denim Overalls (2-7)",2},
+		{"Reversible Belt Gold","Reversible Jacquard Quattro G Belt",3},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz",2},
-		{"Jewelry","Ruby Stud Drop Earrings",2},
-		{"Small Bags","Ederlo Small Necessity Bag",4},
+		{"Floral Jewelery","14K Gold-Plated Floral Statement Earrings",3},
+		{"Small Bag","Ederlo Small Necessity Bag",4},
 	};
 	
 }
@@ -72,11 +70,11 @@ public void productImagesTest(String searchKey,String mainProduct,int imagesCoun
 public Object[][] getProductPriceAndColorTestData() {
 	return new Object[][] {
 		
-		{"Floral Dress","Aida Floral Velvet Dress"},
-		{"Belts","Logo Embellished Belt"},
+		{"Overall Dress ","Leopard Denim Overalls (2-7)"},
+		{"Reversible Belt Gold","Reversible Jacquard Quattro G Belt"},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz"},
-		{"Jewelry","Ruby Stud Drop Earrings"},
-		{"Small Bags","Ederlo Small Necessity Bag"},
+		{"Floral Jewelery","14K Gold-Plated Floral Statement Earrings"},
+		{"Small Bag","Ederlo Small Necessity Bag"},
 	};
 	
 }
@@ -90,3 +88,5 @@ public void productPriceAndColorTest(String searchKey,String mainProduct) {
 	Assert.assertTrue(priceText.contains("$"));
 }
 }
+
+

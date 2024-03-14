@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import com.qa.guess.factory.DriverFactory;
@@ -18,19 +19,26 @@ public class BaseTest {
 	WebDriver driver;
 	protected LoginPage loginPage;
 	protected AccountsPage accPage;
-	protected ResultsPage resultsPage;
 	protected ProductInfoPage productInfoPage;
-	protected SoftAssert softAssert;
+	protected ResultsPage resultsPage;
+    protected SoftAssert softAssert;
 	protected Properties prop;
+	@Parameters({"browser"})
+	
 	@BeforeTest
-	public void setUp() {
-		df=new DriverFactory();
-	prop=df.initProp();
-	 System.out.println("Properties: " + prop);
-	driver=df.initDriver(prop);
-		loginPage=new LoginPage(driver);
-		softAssert=new SoftAssert();
+	public void setUp(String browserName) {
+	    df = new DriverFactory();
+	    prop = df.initProp();
+	    
+	    if(browserName!=null) {
+	    	prop.setProperty("browser", browserName);
+	    }
+	    driver = df.initDriver(prop);
+	    loginPage = new LoginPage(driver);
+	    productInfoPage = new ProductInfoPage(driver); // Initialize productInfoPage
+	    softAssert = new SoftAssert();
 	}
+
 	@AfterTest
 	public void tearDown() {
 		driver.quit();

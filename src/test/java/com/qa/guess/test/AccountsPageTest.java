@@ -52,7 +52,7 @@ public class AccountsPageTest extends BaseTest {
 			
 		};
 	}
-	@Test//(dataProvider="getProductName")
+	@Test(dataProvider="getProductName")
 	public void productSearchTest(String productName) {
 		
 	resultsPage=accPage.performSearch(productName);
