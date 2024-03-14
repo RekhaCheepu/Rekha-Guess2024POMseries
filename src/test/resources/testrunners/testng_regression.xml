@@ -10,12 +10,12 @@
 		 class-name="com.qa.guess.listeners.TestAllureListener" />
 	</listeners>
 	
-	<!--<test name="Login page Test"> 
+	<test name="Login page Test"> 
 		<parameter name="browser" value="chrome"></parameter>
 	<classes>
 			<class name="com.qa.guess.test.LoginPageTest" />
 		</classes>
-	</test>--> 
+	</test>
 	
 	
 	 <test name="Accounts Page Test"> 
@@ -24,12 +24,12 @@
 			<class name="com.qa.guess.test.AccountsPageTest" />
 		</classes>
 	 </test> 
-	 <!-- <test name="Product Info Page Test"> 
+	  <test name="Product Info Page Test"> 
 		<parameter name="browser" value="edge"></parameter>
 	<classes>
 			<class name="com.qa.guess.test.ProductInfoPageTest" />
 		</classes>
-	</test> --> 
+	</test> 
 	
 	
 	</suite>

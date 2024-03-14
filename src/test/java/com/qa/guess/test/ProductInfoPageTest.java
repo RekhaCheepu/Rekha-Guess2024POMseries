@@ -17,7 +17,7 @@ public class ProductInfoPageTest extends BaseTest{
 public Object[][] getProductTestData() {
 	return new Object[][] {
 		
-		{"Overall Dress ","Leopard Denim Overalls (2-7))"},
+		{"Overall Dress ","Leopard Denim Overalls (2-7)"},
 		{"Reversible Belt Gold","Reversible Jacquard Quattro G Belt"},
 		{"GUESS Bella","GUESS Bella Vita Rosa, 3.4 oz"},
 		{"Floral Jewelery","14K Gold-Plated Floral Statement Earrings"},
