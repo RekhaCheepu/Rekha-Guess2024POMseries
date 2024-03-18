@@ -19,7 +19,7 @@ public class OptionsManager {
 
         if (Boolean.parseBoolean(prop.getProperty("remote"))) {
             options.setCapability("platformName", "linux");
-            // options.setCapability("browserVersion", prop.getProperty("browserversion"));
+             options.setCapability("browserVersion", prop.getProperty("browserversion"));
         }
 
         if (Boolean.parseBoolean(prop.getProperty("headless"))) {
@@ -34,12 +34,13 @@ public class OptionsManager {
 
         if (Boolean.parseBoolean(prop.getProperty("remote"))) {
             options.setCapability("platformName", "linux");
-            // options.setCapability("browserVersion", prop.getProperty("browserversion"));
+             options.setCapability("browserVersion", prop.getProperty("browserversion"));
         }
 
         if (Boolean.parseBoolean(prop.getProperty("headless"))) {
             System.out.println(".....Running the test in Headless mode.......");
             options.addArguments("--headless");
+            
         }
         return options;
     }
@@ -49,7 +50,7 @@ public class OptionsManager {
 
         if (Boolean.parseBoolean(prop.getProperty("remote"))) {
             options.setCapability("platformName", "linux");
-            // options.setCapability("browserVersion", prop.getProperty("browserversion"));
+             options.setCapability("browserVersion", prop.getProperty("browserversion"));
         }
 
         if (Boolean.parseBoolean(prop.getProperty("headless"))) {

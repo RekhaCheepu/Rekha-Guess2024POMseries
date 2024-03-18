@@ -10,22 +10,34 @@
 		 class-name="com.qa.guess.listeners.TestAllureListener" />
 	</listeners>
 	
-	<test name="Login page Test"> 
+	<test name="Login page Test _ chrome _ 109"> 
 		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browserversion" value="109.0"></parameter>
 	<classes>
 			<class name="com.qa.guess.test.LoginPageTest" />
 		</classes>
 	</test>
 	
 	
-	 <test name="Accounts Page Test"> 
-		<parameter name="browser" value="firefox"></parameter>
+	<test name="Login page Test _ chrome _ 90"> 
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browserversion" value="90.0"></parameter>
+	<classes>
+			<class name="com.qa.guess.test.LoginPageTest" />
+		</classes>
+	</test>
+	
+	
+	 <test name="Accounts Page Test _ chrome _ 90"> 
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browserversion" value="90.0"></parameter>
 	<classes>
 			<class name="com.qa.guess.test.AccountsPageTest" />
 		</classes>
 	 </test> 
-	  <test name="Product Info Page Test"> 
-		<parameter name="browser" value="edge"></parameter>
+	  <test name="Product Info Page Test _ chrome _ 109"> 
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browserversion" value="109.0"></parameter>
 	<classes>
 			<class name="com.qa.guess.test.ProductInfoPageTest" />
 		</classes>
